@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="FINALECSS.css">
+    <meta charset="UTF-8">
+<meta name="author" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script  src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/14.8.1/math.js"></script>
+</head>
+<body> 
+    <div id="myname"  class="clock"
+   >
+        <img src="0.png" id="h1" >
+         <img src="1.png" id="h2"><h1 class="clockPoint">:</h1>
+          <img src="2.png" id="m1" >
+           <img src="3.png" id="m2" ><h1 class="clockPoint">:</h1>
+            <img src="4.png" id="s1" >
+             <img src="9.png" id="s2" >
+    </div>
+   
+    <script>
+      
+    scren='';
+function tempreel(){
+madate = new Date();
+heur=madate.getHours();
+minute=madate.getMinutes();
+second=madate.getSeconds();
+if(heur<10){
+document.getElementById('h1').src='0.png'
+document.getElementById('h2').src=  heur.toString()+'.png'
+}
+else {
+heur=heur.toString();
+document.getElementById('h1').src=heur[0]+'.png'
+document.getElementById('h2').src=heur[1]+'.png'
+
+}
+if(minute<10){
+document.getElementById('m1').src='0.png'
+document.getElementById('m2').src= minute.toString()+'.png'
+}
+else {
+minute=minute.toString();
+document.getElementById('m1').src=minute[0]+'.png'
+document.getElementById('m2').src=minute[1]+'.png'
+
+}
+
+if(second<10){
+document.getElementById('s1').src='0.png'
+document.getElementById('s2').src= second.toString()+'.png'
+}
+else {
+second=second.toString();
+document.getElementById('s1').src=second[0]+'.png'
+document.getElementById('s2').src=second[1]+'.png'
+
+} }
+setInterval(tempreel,1000);
+
+function injectdeg(s){
+for(i=0;i<s.length;i++){
+if(s[i]=='s' || s[i]=='t'){
+    for(j=i;j<s.length;j++){
+        if(s[j]==')') {k=j; i=j+5 ;break;}
+        
+    }
+  demi1=s.slice(0,j);
+  demi2=s.slice(j,s.length);
+  s=demi1+' deg'+demi2;
+}
+}
+return s;
+}
+
+    </script>
+<br>
+
+<div class="calculator">
+    <div class="screen" id="screen" ></div>
+
+    <div class="calc-keys">
+        <button onclick="scren+='7'; document.getElementById('screen').textContent=scren">7</button>
+        <button onclick="scren+='8'; document.getElementById('screen').textContent=scren">8</button>
+        <button onclick="scren+='9'; document.getElementById('screen').textContent=scren">9</button>
+        <button onclick="scren+='/'; document.getElementById('screen').textContent=scren">÷</button>
+        <button onclick="scren+='4'; document.getElementById('screen').textContent=scren">4</button>
+        <button onclick="scren+='5'; document.getElementById('screen').textContent=scren">5</button>
+        <button onclick="scren+='6'; document.getElementById('screen').textContent=scren">6</button>
+        <button onclick="scren+='*'; document.getElementById('screen').textContent=scren">×</button>
+        <button onclick="scren+='1'; document.getElementById('screen').textContent=scren">1</button>
+        <button onclick="scren+='2'; document.getElementById('screen').textContent=scren">2</button>
+        <button onclick="scren+='3'; document.getElementById('screen').textContent=scren">3</button>
+        <button onclick="scren+='-'; document.getElementById('screen').textContent=scren">-</button>
+        <button onclick="scren+='0'; document.getElementById('screen').textContent=scren">0</button>
+        <button onclick="scren+='.'; document.getElementById('screen').textContent=scren">.</button>
+        <button onclick="scren=injectdeg(scren);
+        try{res=math.evaluate(scren);document.getElementById('screen').textContent=res.toString();scren=res.toString();} catch{document.getElementById('screen').textContent='ERROR'}
+          " >=</button>
+        <button onclick="scren+='+'; document.getElementById('screen').textContent=scren" >+</button>
+        <button onclick="scren+='sin('; document.getElementById('screen').textContent=scren">sin</button>
+        <button onclick="scren+='tan('; document.getElementById('screen').textContent=scren">tan</button>
+        <button onclick="scren+='log('; document.getElementById('screen').textContent=scren">log</button>
+        <button onclick="scren+='exp('; document.getElementById('screen').textContent=scren">exp</button>
+        <button onclick="scren+='('; document.getElementById('screen').textContent=scren">(</button> 
+        <button onclick="scren+=')'; document.getElementById('screen').textContent=scren">)</button>
+        <button onclick="scren=''; document.getElementById('screen').textContent=scren">Clear</button>
+        <button onclick="scren=scren.slice(0, scren.length - 1); document.getElementById('screen').textContent=scren">Del</button>
+    </div>
+</div>
+
+</body>
+</html>

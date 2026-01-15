@@ -1,0 +1,108 @@
+body{
+     background: linear-gradient(to bottom,  #d8b4fe 0%,
+     #c084fc 25%,     #a855f7 50%, #9333ea 75%,  #7a2dbd 100%   );
+ background-repeat: no-repeat;  
+height: 100vh;
+ margin: 0;
+}
+
+.clock:hover{
+
+transform: rotate(360deg);
+
+
+}
+
+.clock{
+  transition: transform 3s ease;
+   position: absolute;
+     width:fit-content;
+     margin-left:35% ;
+     
+background: rgba(255, 255, 255, 0.25); 
+  backdrop-filter: blur(10px); 
+  -webkit-backdrop-filter: blur(10px);
+  border-radius:20px;
+  
+  border: 1px solid rgba(255, 255, 255, 0.3);
+     
+     
+text-align: center;
+margin-top: 20px;
+
+} 
+.clockPoint{
+    background-color:;
+    position: relative;
+    bottom: 20px;
+    margin: 0;
+  
+    display:inline-block;
+    font-size: 60px;
+    text-align: center;
+    
+    
+}
+
+
+.calculator{
+
+ width:320px;
+ margin:30px auto;
+  margin-top: 180px;
+ padding:15px;
+ background: rgba(255,255,255,0.25);
+ backdrop-filter: blur(12px);
+ border-radius:25px;
+ border:1px solid rgba(255,255,255,0.3);
+ box-shadow:0 10px 30px rgba(0,0,0,0.2);
+ text-align:center;
+}
+
+.screen{
+  direction: ltr;
+ height:50px;
+ margin-bottom:15px;
+ border-radius:12px;
+ background:white;
+ font-size:22px;
+ text-align:left;
+ padding:10px;
+ overflow:hidden;
+}
+
+.calc-keys{
+ display:grid;
+ grid-template-columns: repeat(4,1fr);
+ gap:10px;
+}
+
+.calc-keys button{
+ height:45px;
+ border:none;
+ border-radius:15px;
+ font-size:16px;
+ cursor:pointer;
+ background: linear-gradient(145deg,#ffffff,#e6e6e6);
+ box-shadow: 3px 3px 8px rgba(0,0,0,0.2),
+            -3px -3px 8px rgba(255,255,255,0.7);
+ transition:0.2s;
+}
+
+.calc-keys button:hover{
+ transform: translateY(-3px);
+}
+
+.calc-keys button:active{
+ transform: scale(0.95);
+ box-shadow: inset 2px 2px 5px rgba(0,0,0,0.2);
+}
+
+.calc-keys button:nth-child(15){
+ background:#9333ea;
+ color:white;
+}
+
+
+
+
