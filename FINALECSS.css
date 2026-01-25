@@ -17,7 +17,7 @@ transform: rotate(360deg);
   transition: transform 3s ease;
    position: absolute;
      width:fit-content;
-     margin-left:35% ;
+     margin-left:34% ;
      
 background: rgba(255, 255, 255, 0.25); 
   backdrop-filter: blur(10px); 
@@ -49,7 +49,7 @@ margin-top: 20px;
 
  width:320px;
  margin:30px auto;
-  margin-top: 180px;
+  margin-top: 160px;
  padding:15px;
  background: rgba(255,255,255,0.25);
  backdrop-filter: blur(12px);
