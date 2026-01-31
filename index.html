@@ -64,8 +64,8 @@ document.getElementById('s2').src=second[1]+'.png'
 } }
 setInterval(tempreel,1000);
 
-function injectdeg(s){ /* la fonction evaluate() calculer cos,sin,tan en radian et pour que la fonction calculer en degre il faut injecter le mot'deg' apres le nmbr 
-exple : cos(3 deg); et pou ca j ais crrer cette fonction injectdeg();*/
+function injectdeg(s){ /* por cette fonction ,  la fonction evaluate() calculer cos,sin,tan en radian et pour que la fonction calculer en degre il faut injecter le mot'deg' apres le nmbr 
+exple : cos(3 deg); et pour ca j ais creer cette fonction injectdeg() qui permet d injecter le mot "deg" a chaque fois rencontre les fonction tan() ou sin();*/
 for(i=0;i<s.length;i++){
 if(s[i]=='s' || s[i]=='t'){
     for(j=i;j<s.length;j++){
@@ -118,6 +118,7 @@ return s;
 
 </body>
 </html>
+
 
 
 
