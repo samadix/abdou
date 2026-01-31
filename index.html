@@ -12,8 +12,8 @@
     "evaluate()" et qui prend en charge les fonctions sin, log, tan, cos..... , c est pour ca j ais l inculder pour utilise "evaluate()" -->
 </head>
 <body> 
-    <div id="myname"  class="clock"
-   >
+    <div id="myname"  class="clock" 
+   > <!-- j ais utiliser la mm ide de l exercice qu ona vue on TD , jouer avec des image des nbr 0-9 pour former une horloge-->
         <img src="0.png" id="h1" >
          <img src="1.png" id="h2"><h1 class="clockPoint">:</h1>
           <img src="2.png" id="m1" >
@@ -63,7 +63,8 @@ document.getElementById('s2').src=second[1]+'.png'
 } }
 setInterval(tempreel,1000);
 
-function injectdeg(s){
+function injectdeg(s){ /* la fonction evaluate() calculer cos,sin,tan en radian et pour que la fonction calculer en degre il faut injecter le mot'deg' apres le nmbr 
+exple : cos(3 deg); et pou ca j ais crrer cette fonction injectdeg();*/
 for(i=0;i<s.length;i++){
 if(s[i]=='s' || s[i]=='t'){
     for(j=i;j<s.length;j++){
@@ -116,6 +117,7 @@ return s;
 
 </body>
 </html>
+
 
 
 
